@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Co-pilot</title>
+    <link rel="stylesheet" href="/static/copilot/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interview Co-pilot</h1>
+            <div class="status-container">
+                <span id="status">Disconnected</span>
+                <button id="startButton" class="btn">Start Interview</button>
+                <button id="settingsButton" class="btn">⚙️ Settings</button>
+            </div>
+        </header>
+
+        <div class="summary-container">
+            <div class="summary-box">
+                <h3>Resume Summary</h3>
+                <p id="resumeSummary">Your resume summary will appear here...</p>
+            </div>
+        </div>
+
+        <main>
+            <div class="left-column">
+                <div class="preview-container">
+                    <h2>Screen Preview</h2>
+                    <div id="preview">
+                        <div class="preview-placeholder">Your screen share preview will appear here...</div>
+                        <video id="videoPreview" autoplay muted></video>
+                    </div>
+                </div>
+                <div class="conversation-container">
+                    <h2>Interview Questions</h2>
+                    <div id="conversationBox" class="conversation-box"></div>
+                    <div class="manual-input">
+                        <input type="text" id="manualQuestion" placeholder="Type your question here...">
+                        <button id="submitQuestion" class="btn">Submit</button>
+                        <button id="microphoneButton" class="btn">🎤</button>
+                        <button id="screenshotButton" class="btn">📸</button>
+                    </div>
+                </div>
+            </div>
+            <div class="answer-container">
+                <h2>Assistant Answers</h2>
+                <div id="answerBox"></div>
+                <button id="stopAnswerButton" class="btn" disabled>Stop Answer</button>
+            </div>
+        </main>
+    </div>
+    <script src="/static/copilot/js/interview.js"></script>
+</body>
+</html>

@@ -1,1 +1,1 @@
-# ai-interview-copilot
+# ai-interview

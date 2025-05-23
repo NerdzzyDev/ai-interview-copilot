@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Co-pilot - Settings</title>
+    <link rel="stylesheet" href="/static/copilot/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interview Co-pilot Settings</h1>
+            <div class="status-container">
+                <a href="/" class="btn">Back to Interview</a>
+            </div>
+        </header>
+        <main>
+            <div class="settings-container">
+                <h2>Settings</h2>
+                <form id="settingsForm" class="settings-form">
+                    <div class="settings-box">
+                        <h3>App Theme</h3>
+                        <select id="theme" name="theme">
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                    <div class="settings-box">
+                        <h3>API Keys</h3>
+                        <label for="openaiApiKey">OpenAI API Key</label>
+                        <input type="password" id="openaiApiKey" name="openai_api_key" placeholder="Enter OpenAI API Key">
+                        <label for="deepgramApiKey">Deepgram API Key</label>
+                        <input type="password" id="deepgramApiKey" name="deepgram_api_key" placeholder="Enter Deepgram API Key">
+                    </div>
+                    <div class="settings-box">
+                        <h3>Interview Language</h3>
+                        <select id="language" name="language">
+                            <option value="ru">Russian</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    <div class="settings-box">
+                        <h3>Custom Prompt</h3>
+                        <textarea id="prompt" name="prompt" rows="5" placeholder="Enter custom prompt"></textarea>
+                    </div>
+                    <div class="settings-box">
+                        <h3>Resume (Markdown)</h3>
+                        <textarea id="resume" name="resume" rows="10" placeholder="Edit resume in Markdown"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Save Settings</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="/static/copilot/js/settings.js"></script>
+</body>
+</html>
